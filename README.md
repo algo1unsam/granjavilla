@@ -1,6 +1,6 @@
 # Granjavilla
 
-### Intro
+## Intro
 Héctor es un granjero que se gana la vida cultivando plantas de distintas especies.
 Para ello tiene que sembrar, regar y cosechar sus cultivos. Después de la cosecha, Héctor vende lo que cultivó, obteniendo ganancias en la forma de monedas de oro.
 Héctor es muy ahorrativo y todo el oro que obtiene por sus cosechas lo acumula.
@@ -14,7 +14,7 @@ Contamos con imágenes en la carpeta assets para ilustrar el juego.
 
 TIP: En los nombres de las imágenes, recordar que "corn" es maíz y "wheat" es trigo en inglés.
 
-### Sembrar
+## Sembrar
 Además de moverse, Héctor debe poder realizar las siguientes acciones:
 - Al apretar la M siembra una semilla de maíz en su posición actual.
 - Al apretar la T siembra una semilla de trigo en su posición actual.
@@ -35,7 +35,7 @@ Vale cuidarse de no hacerlo al principio, y agregar la validación más adelante
 _OJO_ si se pone en la misma posición p.ej. dos plantas de maíz, entonces al regarse se van a regar las dos, al cosecharse se van a cosechar las dos, etc, pero se va a mostrar una sola imagen.
 
 
-### Regar
+## Regar
 Una vez sembrado un cultivo, para que crezca debe ser regado. 
 Cuando presionamos la R, Héctor debe regar la planta que se encuentre en su misma posición.
 Si no hay una planta, tirar una excepción indicando "no tengo nada para regar".
@@ -49,6 +49,16 @@ Qué pasa cuando se riega una planta:
 | **Tomaco** | Se mueve a la celda de arriba. <br> Si ya está en el borde de arriba, no hace nada (o pasa abajo de todo :D) | 
   
 
+## Aspersor
+![aspersor](https://i.pinimg.com/originals/20/f5/ab/20f5ab811789f5ed4ca147f199bbad51.jpg)
+
+Héctor tiene un aspersor que lo ayuda con la tarea de regado.
+Hacer que el juego comience con el aspersor en el centro del juego. El aspersor de Héctor riega todas las plantas que están alrededor cada 5 segundos.
+
+**TIP**  
+Investigar los métodos 
+- `game.onTick(milliseconds, name, action)` para ejecutar un bloque de código cada cierto tiempo.
+- `game.getObjectsIn(position)` para saber todos los objetos que están en una posición.
 
 ## Cosecha
 Las plantas adultas se pueden cosechar.
